@@ -15,10 +15,10 @@
       <div class="card-section">
         {{-- <ImgCard v-for="(card,i) in cards" :key="i" :cardData="card"/> --}}
         @foreach ($cardsData as $cardData)
-          <div class="card">
+          <a href="{{route('comics-details-page', ['id' => $cardData->id])}}" class="card">
             <img src="{{$cardData['thumb']}}" :alt="{{$cardData['series']}}">
             <div> {{$cardData['series']}} </div>
-          </div>
+          </a>
         @endforeach
       </div>
       <!-- pulsante viewMore card -->

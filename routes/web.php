@@ -18,6 +18,9 @@ Route::get('/', 'HomeController@home')->name('home-page');
 // route per comics page
 Route::get('/comics', 'ComicsController@comics')->name('comics-page');
 
+// route per comic details page
+Route::get('/comicsDetails/{id}', 'ComicsController@comicsDetails')->name('comics-details-page');
+
 // route per movies page
 Route::get('/movies', 'HomeController@movies')->name('movies-page');
 

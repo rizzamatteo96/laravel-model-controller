@@ -11,14 +11,27 @@ class ComicsController extends Controller
     
     public function comics() {
 
-        $test = Comic::all();
-        dd($test);
+        $cards = Comic::all();
+        // dd($test);
 
         $data = [
-            'cardsData' => config('comics'),
+            'cardsData' => $cards,
             'shopItems' => config('shop')
         ];
     
         return view('comics', $data);
+    }
+
+    public function comicsDetails($id) {
+
+        $card = Comic::where('id', $id)->first();
+        // dd($card);
+
+        $data = [
+            'cardsData' => $card,
+            'shopItems' => config('shop')
+        ];
+    
+        return view('comicsDetails', $data);
     }
 }
