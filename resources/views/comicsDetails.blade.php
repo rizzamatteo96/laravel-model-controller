@@ -12,6 +12,9 @@
     <!-- fine jumbotron -->
 
     <div class="container">
+
+      <img src="{{$cardsData->thumb}}" alt="">
+
       <h2>{{$cardsData->title}}</h2>
       
 			<div class="check-shop">
